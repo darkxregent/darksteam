@@ -1,0 +1,174 @@
+
+.dark_content_art *{
+    display: inline-block;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+.drak_card{
+    min-width: 265px;
+    max-width: 305px;
+    width: 23.8%;
+    background-color: #000;   
+    border-radius: 12px;
+    margin: 2px 5px;
+}
+.dark_articles {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border-right: 1px solid #000;
+    /* background: rgb(0, 17, 249); */
+    border: 1px solid #fff;
+}
+.dark_articles:hover, .dark_articles:hover a,.dark_articles:hover video{
+    border-radius: 2px;
+}
+.dark_articles video, .dark_articles a{
+    width: 100%;
+    max-height: 170px;
+    border-radius: 15px;
+}
+.drak_content_card{
+    padding: 10px 6px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 15px);
+
+}
+
+.drak_info_card{
+    display: flex;
+    width: 100%;
+}
+.drak_info_card a{
+    width: 55px;
+}
+.card_prod{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.posi_card{
+    width: 90%;
+}
+.postcard{
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+}
+.postcard *, .posi_card a{
+    width: 100%;
+
+}
+.posi_card_tr h4{
+    width: calc(100% - 30px) ;
+    height: 16px;
+    overflow: hidden;
+}
+.comt_card{
+    width: 97%;
+    padding: 0 3px;
+    overflow: hidden;
+    color: rgb(176, 170, 161);
+    height: 18px;
+}
+
+.posi_card_tr h4:hover{
+    color: rgb(89, 89, 255);
+}
+.postcard  a:hover p{
+    color: rgb(89, 89, 255);
+}
+
+    /* pour la stylisatuion de l'index  */
+
+.pading_list{
+    display: flex;
+    justify-content: space-between;
+    width: calc(70% - 50px) ;
+    padding: 20px 2px;
+    position: relative;
+    right: -30%;
+}
+.pading{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.pd_cenx{
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0.832);
+    padding: 3px 8px;
+    border-radius: 50%;
+}
+.pad_op{
+    width: 15%;
+    min-width: 78px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.721);
+}
+.pad_op span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 7px;
+    
+}
+@media all AND (max-width:1183px){
+    .drak_card{
+        width: 32%;
+        max-width: none;
+        background-color: #000;   
+        border-radius: 12px;
+        margin: 2px 5px;
+    }
+    .dark_articles video, .dark_articles a{
+        width: 100%;
+        height: auto;
+        max-height: none;
+        max-height: 290px;
+        border-radius: 15px;
+    }
+    
+}
+@media all AND (max-width:1020px){
+    .drak_card{
+        width: 48%;
+        max-width: none;
+        background-color: #000;   
+        border-radius: 12px;
+        margin: 2px 5px;
+    }
+    .dark_articles video, .dark_articles a{
+        width: 100%;
+        height: auto;
+        max-height: none;
+        max-height: 290px;
+        border-radius: 15px;
+    }
+    
+}
+@media all AND (max-width:670px){
+    .drak_card{
+        width: 94%;
+        max-width: 94%;
+        background-color: #000;   
+        border-radius: 12px;
+        margin: 2px 5px;
+    }
+    .dark_articles video, .dark_articles a{
+        width: 100%;
+        height: auto;
+        max-height: none;
+        max-height: 300px;
+        border-radius: 11px;
+    }
+    
+}

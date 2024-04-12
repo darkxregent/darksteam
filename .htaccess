@@ -1,0 +1,26 @@
+RewriteEngine On
+
+RewriteRule ^index$  index.php
+
+RewriteRule ^wath$  index.php
+
+RewriteRule ^index-([0-9a-zA-Z]+)cath$  index.php?cath=$1
+
+RewriteRule ^wath-([0-9a-zA-Z]+)cath$  index.php?cath=$1
+
+RewriteRule ^index-([0-9a-zA-Z]+)cath-([0-9a-zA-Z]+)pages$  index.php?cath=$1&pages=$2
+
+RewriteRule ^searsh$  searsh.php
+
+RewriteRule ^cc/statut/([0-9a-zA-Z]+)-setid$  compte/statut.php?setid=$1
+
+RewriteRule ^cc/statut/([0-9a-zA-Z]+)-setid-([0-9a-zA-Z]+)-setx$  compte/statut.php?setid=$1&setx=$2
+
+
+RewriteRule ^send?([0-9a-zA-Z]+)$  getadmin/send.php?set=$1
+
+RewriteRule ^xplays$  xplays.php
+
+RewriteRule ^setlist?([0-9a-zA-Z]+)$  getadmin/configlist.php?set=$1
+
+RewriteRule ^seting/setmodif.php?str=([0-9a-zA-Z]+)$  getadmin/config.php?str=$1

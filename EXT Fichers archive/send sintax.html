@@ -1,0 +1,126 @@
+
+
+<!-- genere le couver -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générer des images à partir d'une vidéo</title>
+</head>
+<body>
+    <h1>Générer des images à partir d'une vidéo</h1>
+    
+    <form>
+        <label for="videoInput">Sélectionnez une vidéo :</label>
+        <input type="file" id="videoInput" accept="video/*" onchange="handleVideoInput()" />
+    </form>
+
+    <script>
+        function handleVideoInput() {
+            // Récupérer l'élément input file
+            var videoInput = document.getElementById('videoInput');
+
+            // Vérifier si un fichier vidéo a été sélectionné
+            if (videoInput.files.length > 0) {
+                // Créer un objet URL pour la vidéo sélectionnée
+                var videoURL = URL.createObjectURL(videoInput.files[0]);
+
+                // Créer un élément vidéo
+                var videoElement = document.createElement('video');
+                videoElement.src = videoURL;
+
+                // Attacher un gestionnaire d'événements pour capturer le chargement de la vidéo
+                videoElement.addEventListener('loadeddata', function() {
+                    // Vous pouvez maintenant utiliser videoElement pour générer des images ou effectuer d'autres opérations
+                    var canvas = document.createElement('canvas');
+                    var context = canvas.getContext('2d');
+
+                    // Définir les dimensions du canvas en fonction de la vidéo
+                    canvas.width = videoElement.videoWidth;
+                    canvas.height = videoElement.videoHeight;
+
+                    // Dessiner la première image du canvas
+                    context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+
+                    // Récupérer les données de l'image sous forme de base64
+                    var imageData = canvas.toDataURL('image/jpeg');
+
+                    // Afficher l'image (vous pouvez également l'enregistrer ou l'envoyer au serveur)
+                    var img = new Image();
+                    img.src = imageData;
+                    document.body.appendChild(img);
+
+                    // Libérer l'URL de la vidéo
+                    URL.revokeObjectURL(videoURL);
+                });
+
+                // Charger la vidéo
+                videoElement.load();
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- pour les Fichier -->
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_FILES['monFichier'])) {
+        // Emplacement temporaire du fichier téléchargé
+        $emplacementTemporaire = $_FILES['monFichier']['tmp_name'];
+
+        // Nom du fichier d'origine
+        $nomFichierOriginal = $_FILES['monFichier']['name'];
+
+        // Définir le chemin vers l'exécutable FFmpeg
+        $ffmpegPath = '/chemin/vers/ffmpeg';
+
+        // Dossier de destination pour les différentes qualités
+        $destinationFolder = 'chemin/vers/le/stockage/';
+
+        // Télécharger le fichier original
+        move_uploaded_file($emplacementTemporaire, $destinationFolder . $nomFichierOriginal);
+
+        // Nom des fichiers pour différentes qualités
+        $nomFichier240p = '240p_' . $nomFichierOriginal;
+        $nomFichier360p = '360p_' . $nomFichierOriginal;
+        $nomFichier720p = '720p_' . $nomFichierOriginal;
+
+        // Chemins complets pour différentes qualités
+        $cheminFichier240p = $destinationFolder . $nomFichier240p;
+        $cheminFichier360p = $destinationFolder . $nomFichier360p;
+        $cheminFichier720p = $destinationFolder . $nomFichier720p;
+
+        // Créer différentes versions du fichier avec FFmpeg
+        exec("$ffmpegPath -i $destinationFolder$nomFichierOriginal -vf scale=426:240 $cheminFichier240p");
+        exec("$ffmpegPath -i $destinationFolder$nomFichierOriginal -vf scale=640:360 $cheminFichier360p");
+        exec("$ffmpegPath -i $destinationFolder$nomFichierOriginal -vf scale=1280:720 $cheminFichier720p");
+
+        echo "Le fichier a été téléchargé et traité avec succès.";
+    } else {
+        echo "Aucun fichier n'a été soumis.";
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Téléchargement de Fichier</title>
+</head>
+<body>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <label for="monFichier">Sélectionnez un fichier :</label>
+    <input type="file" id="monFichier" name="monFichier" accept=".mp4">
+    <br>
+    <input type="submit" value="Envoyer">
+</form>
+
+</body>
+</html>

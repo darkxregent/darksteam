@@ -1,0 +1,153 @@
+.send_list{
+    width: 80%;
+    margin: auto;
+}
+.hd_of_send{
+    width: 100%;
+    background-color: blue;
+    color: black;
+    height: 24px;
+    margin: auto;
+    text-align: center;
+}
+
+.config_art {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+.name_art{
+    width: 70%;
+}
+.name_art h3{
+    overflow: hidden;
+    color: black;
+}
+.config_art *{
+    display: flex;
+    height: 30px;
+    font-size: 1.5rem;
+}
+.param_mod{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 24%;
+    min-width: 250px;
+}
+.param_mod button{
+    height: 80%;
+    margin: auto;
+    font-size: 1rem;
+    padding: 0 16px;
+    background-color: chocolate;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+/* la styles confirg des modif */
+  
+.hd_header{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    background: #000;
+    position: relative;
+    padding: 4px 0;
+    border-radius: 12px;
+}
+.hd_header .modbtn,.valdbtn{
+    position: absolute;
+    right: 7px;
+    top: 3px;
+    padding: 0 15px;
+    background-color: lawngreen;
+    border-radius: 17px;
+    border-color: aliceblue;
+    color: #000;
+
+}
+
+.modEdither{
+    width: 80%;
+    position: relative;
+    padding: 4px 0;
+    border-radius: 12px;
+    margin: auto;
+}
+.lictvid{
+    width: 55%;
+    max-width: 650px;
+}
+.lectmod{
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+.infomod{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.inpmod{
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+
+}
+.inpmod input,textarea{
+    color: #000;
+    padding-left: 11px;
+    border-radius: 3px;
+}
+.sectall{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+    width: 100%;
+}
+.sectall div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.select{
+    color: #FFF;
+    background-color: rgb(63, 83, 44);
+}
+.valdbtn{
+    position: relative;
+    top: 15px;
+    width: 100%;
+    left: 4px;
+}
+
+
+
+@media all AND (max-width:950px){
+    .hd_header,.modEdither{
+        width: 100%;
+    }
+}
+@media all AND (max-width:700px){
+    .lictvid{
+        width: 98%;
+        border-radius: 4px;
+    }
+    .lectmod{
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+    .infomod{
+        gap: 18px;
+    }
+}

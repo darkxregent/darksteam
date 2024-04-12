@@ -1,0 +1,60 @@
+<?php
+$domainhost = 'http://'.$_SERVER['HTTP_HOST'];
+
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/allcss.css">
+</head>
+<body>
+<header>
+    <nav class="menu_nav">
+        <h1><a href="#" class="title_link"><img src="../darck_logo.png" class="logo"  alt="logo de DarkStream"> DarkSteam</a></h1>
+        <form  method="get"  action="#"  class="searching">
+            <input type="search" class="super_search" placeholder="Recherch ...">
+            <button type="submit" class="btn_search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="svg_search">
+                    <path d="M794-96 525.787-364Q496-341.077 457.541-328.038 419.082-315 373.438-315q-115.311
+                    0-193.875-78.703Q101-472.406 101-585.203T179.703-776.5q78.703-78.5 191.5-78.5T562.5-776.356Q641-697.712
+                    641-584.85q0 45.85-13 83.35-13 37.5-38 71.5l270 268-66 66ZM371.441-406q75.985 0 127.272-51.542Q550-509.083
+                    550-584.588q0-75.505-51.346-127.459Q447.309-764 371.529-764q-76.612 0-128.071
+                         51.953Q192-660.093 192-584.588t51.311 127.046Q294.623-406 371.441-406Z"/>
+                </svg>
+            </button>
+        </form>
+        
+        <ul class="if_connet">
+            <h3 class="avatar"><a href=""></a></h3>
+            <h3 class="avatar"><a href=""><img src="<?=$_SESSION['avatar'];?>" alt=""></a></h3>
+        </ul>
+    </nav>
+    
+
+
+
+
+    <ul class="option_nav">
+        <li><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" class="option_svg" viewBox="0 -960 960 960" >
+                <path d="M229-189h127v-257h249v257h126v-377L480-754 229-566.333V-189Zm-91
+                 91v-514l342-257 343 257v514H525v-268h-89v268H138Zm342-374Z"/>
+            </svg>
+            <span>Acceuil</span> </a></li>
+        <li><a href="">abonnemnt</a></li>
+        <li><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" class="option_svg"  viewBox="0 -960 960 960" >
+                <path d="m429-383 270-174-270-175v349ZM285-195q-36.413 0-63.706-27.612Q194-250.225
+                 194-286v-542q0-36.188 27.294-64.094Q248.587-920 285-920h542q36.188 0 63.594
+                  27.906T918-828v542q0 35.775-27.406 63.388Q863.188-195
+                   827-195H285Zm0-91h542v-542H285v542ZM134-44q-36.825 0-63.912-27.406Q43-98.812
+                    43-135v-633h91v633h633v91H134Zm151-784v542-542Z"/>
+            </svg>
+            <span>Mes Videos</span></a></li>
+       
+    </ul>
+</header>
+</body>
+</html>

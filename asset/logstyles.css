@@ -1,0 +1,110 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.menu_nav{
+    position: absolute;
+}
+.forom_loget{
+    margin: auto;
+    width: 30%;
+    height: 535px;
+    border-radius: 24px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5%;
+    background: #000;
+    padding-bottom: 12px;
+    box-shadow: rgb(188, 176, 176) 2px 2px 2px;
+    
+}
+.forom_loget.cont{
+    height: 300px;
+    gap: 7%;
+}
+.forom_loget input{
+    color: #000;
+    padding-left: 8px;
+    height: 18px;
+    outline: none;
+    border-bottom: 3px solid black;
+}
+.forom_loget input:focus, .forom_loget input[type=file]:focus{
+    border-bottom-color: red;
+}
+.forom_loget input:valid, .forom_loget input[type=file]:valid{
+    border-bottom-color: rgba(54, 232, 5, 0.815);
+}
+.forom_loget input[type=file]{
+    color: rgb(255, 251, 251);
+    border: 1px solid rgb(255, 253, 253);
+    padding: 2px 0;
+    padding-left: 8px;
+    background-color: rgb(67, 67, 67);
+    border-radius: 3px;
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+.forom_loget div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.forom_loget .genre_types{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.forom_loget .genre_types div{
+    align-items: center;
+}
+.forom_loget .accept{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.getsub{
+    width: 75%;
+    color: rgb(0, 0, 0);
+    background: rgb(1, 237, 1);
+    height: 25px;
+    font-size: 1rem;
+    border-radius: 12px;
+}
+.forom_loget.cont.ext {
+    position: relative;
+}
+.forom_loget.cont.ext button{
+    position: absolute;
+    right: 35px;
+    bottom: 33px;
+    width: 150px;
+    height: 27px;
+    text-align: center;
+    background-color: rgba(54, 232, 5, 0.815);
+
+}
+.forom_loget.cont.int {
+    position: relative;
+    gap: 35px;
+}
+.int.title{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.genre_types .submit{
+    width: 150px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(54, 232, 5, 0.815);
+    border: 4px groove #000;
+    border-radius: 5px;
+}

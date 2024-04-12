@@ -1,0 +1,275 @@
+
+.dark_menu {
+    background: none;
+    height: 48px;
+}
+.option_nav{
+    margin-top: 48px;
+}
+.dark_content {
+    position: relative;
+    top: 50px;
+    height: calc(100% - 60px);
+}
+
+
+
+
+.head_prof{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+}
+.head_prof:hover .camera_svg{
+    display: block;
+    cursor: pointer;
+}
+.head_prof img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 1px;
+    border: 2px solid #000;
+    background-color: white;
+}
+.camera_svg{
+    width:  167px;
+    height: 167px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    display: none;
+
+}
+
+.menu_stat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.dark_info_menu{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 130px); 
+    justify-content: space-around;
+}
+.info_menu{
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+    padding-left: 15px;
+
+}
+/* @media all and (max-width:1150px){
+    .dark_info_menu{
+        width: 80%;
+    }
+}
+@media all and (max-width:680px){
+    .dark_info_menu{
+        width: 75%;
+    }
+} 
+@media all and (max-width:780px){
+    .dark_info_menu{
+        width: 72%;
+    }
+}*/
+.info_menu div{
+    display: flex;
+    gap: 17px;
+    font-size: x-large;
+  
+}
+.info_menu div *{
+    color: rgb(26, 34, 40);
+}
+
+.obntt{
+    padding: 2px 0;
+    min-width: 120px;   
+}
+.stat_list{
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.stat_list li {
+    font-size: larger;
+ 
+}
+.stat_list a{      
+    border: 1px solid rgb(29, 29, 29);
+    border-radius: 25px;
+    background-color: rgb(156, 156, 156);
+    width: 100%;
+    padding: 2px 17px;
+    text-align: center;
+}
+.formabn{
+    min-width: 100px;
+    width: 9vw;
+    display: flex;
+    align-items: center;
+}
+.abn{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    font: large bold serif;
+    cursor: pointer;
+}
+
+/* sous option du statut  */
+
+.op_scroll{
+    display: none;
+}
+.sous_op{
+    height: 70%;
+    max-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.sous_op .sesc{
+    color: red;
+}
+.tabl_bors{
+    border-collapse: collapse;
+    width: 98%;
+    height: auto;
+    margin: auto;
+    margin-top: 8px;
+}
+.tabl_bors thead th{
+    height: 30px;
+    color: #000;
+    background-color: aqua;
+}
+.tabl_bors th, .tabl_bors td{
+    border: 1px solid #000;
+    height: 35px;
+
+}
+
+.tabl_bors td{
+    width: 18%;
+    background: #000;
+    border-color: rgb(255, 255, 255);
+    text-align: center;
+}
+.tabl_bors th{
+    font-size: larger;
+    background: rgba(255, 255, 255, 0.87);
+    color: #000;
+}
+
+
+
+
+/* my video styles */
+.videos_content, .video_dx{
+    width: 100%;
+}
+.video_dx{
+    display: flex;
+    flex-direction: column;
+}
+.barx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 24px);
+    height: 35px;
+    background-color: #000;
+    border-radius: 2px;
+    margin: 2px 0;
+    padding: 0 10px ; 
+    align-items: center;
+}
+.nini_content{
+    width: calc(100% - 6px);
+    background: rgba(0, 0, 255, 0.858);
+    display: none;
+    flex-wrap: wrap;
+}
+.video_card{
+    width: calc(25% - 8px);
+    min-width: 310px;
+    max-width: 320px;
+    border: #000 2px solid;
+    margin: 2px;
+    display: inline-block;
+    background: #010101ce;
+}
+.ifo_content{
+    margin-bottom: 4px;
+}
+video.plays_vdx{
+    width: 100%;
+    background: #000;
+
+}
+
+@media all AND (max-width:1343px){
+    .video_card{
+        width: 32.7%;
+        max-width: none;
+        min-width: 400px;
+        height: auto;
+    }
+}
+@media all AND (max-width:1335px){
+    .video_card{
+        width: 32.5%;
+        max-width: none;
+        min-width: 312px;
+        height: auto;
+    }
+}
+@media all AND (max-width:195px){
+    .video_card{
+        width: 32%;
+        max-width: none;
+        height: auto;
+    }
+}
+@media all AND (max-width:1025px){
+    .video_card{
+        width: 49%;
+        max-width: none;
+        height: auto;
+    }
+}
+@media all AND (max-width:870px){
+    .video_card{
+        width: 48.8%;
+        max-width: none;
+        height: auto;
+    }
+}
+@media all AND (max-width:740px){
+    .video_card{
+        width: 48.6%;
+        max-width: none;
+        height: auto;
+    }
+}
+@media all AND (max-width:707px){
+    .video_card{
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+}
+
+.svg_open{
+    display:  none;
+}

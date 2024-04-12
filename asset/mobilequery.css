@@ -1,0 +1,75 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    position: fixed;
+}
+.dark_content{
+    position: relative;
+    top: 83px;
+    left: 0px;
+    width: 100vw;
+    height: calc(100vh - 130px);
+    overflow: auto;
+    overflow-x: hidden;
+    margin: 0px;
+}
+.option_nav{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 45px;
+    height: 36px;
+    width: 100vw;
+    overflow: initial;
+    background: rgb(50, 49, 49);    
+    padding: 5px 0px;
+    margin: 0px;
+    z-index: 11;
+    border-radius: 2px 2px 0 0;
+
+}
+.option_nav:hover{
+    width: 100vw;
+    
+}
+.option_nav:hover span,.option_nav span{
+    display: none;
+}
+.option_nav li .svg_hdx,.option_nav:hover li .svg_hdx, .sous_op .svg_hdx{
+    width: 75px;
+    height: 65px;
+    background: rgb(50, 49, 49);    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.shadow-nav{
+    height: calc(100vh - 125px);
+    border-radius: 0 0 4px 4px;
+}
+#notifx,.abnn{
+    width: 100vw;
+    height: calc(100vh - 125px);
+    border-radius: 0 0 4px 4px;
+    right: 0px;
+}
+
+
+.plays_content{
+    width: 98vw;
+}
+.pof_user {
+    width: 35px;
+    height: 35px;
+}
