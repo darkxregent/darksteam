@@ -353,14 +353,14 @@
     const nferm =  document.querySelector('.nfermx');
     const Opt = document.querySelector('.opt');
 
-    Opt.addEventListener('click' , () => {
-        cash.classList.toggle('mob');
-        abn.classList.remove('aff');
-        Notif.classList.remove('naf');
-    });
-    navFx.addEventListener('click' , () => {
-        cash.classList.remove('mob');
 
+    iNotif.addEventListener('click' , () => {
+        Notif.classList.toggle('naf');
+        cash.classList.remove('mob');
+        abn.classList.remove('aff');
+    });
+    nferm.addEventListener('click' , () => {
+        Notif.classList.remove('naf');
     });
 
     iAbn.addEventListener('click' , () => {
@@ -371,15 +371,21 @@
     fermAbn.addEventListener('click' , () => {
         abn.classList.remove('aff');
     });
-    
-    iNotif.addEventListener('click' , () => {
-        Notif.classList.toggle('naf');
-        cash.classList.remove('mob');
+
+
+    Opt.addEventListener('click' , () => {
+        cash.classList.toggle('mob');
         abn.classList.remove('aff');
-    });
-    nferm.addEventListener('click' , () => {
         Notif.classList.remove('naf');
     });
+    navFx.addEventListener('click' , () => {
+        cash.classList.remove('mob');
+
+    });
+
+    
+    
+   
 
 
 

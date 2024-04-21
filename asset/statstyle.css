@@ -21,10 +21,7 @@
     border-radius: 50%;
     position: relative;
 }
-.head_prof:hover .camera_svg{
-    display: block;
-    cursor: pointer;
-}
+
 .head_prof img{
     width: 100%;
     height: 100%;
@@ -34,13 +31,15 @@
     background-color: white;
 }
 .camera_svg{
-    width:  167px;
-    height: 167px;
+    width:  50px;
+    height: 50px;
     border-radius: 50%;
     position: absolute;
-    top: -20px;
-    left: -20px;
-    display: none;
+    top: 68px;
+    left: 70px;
+    display: block;
+    background-color: aliceblue;
+    cursor: pointer;
 
 }
 
@@ -49,6 +48,11 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+.psd{
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
 }
 .dark_info_menu{
     display: flex;
@@ -119,8 +123,8 @@
 }
 .abn{
     width: 100%;
-    height: 100%;
-    background-color: #000;
+    /* height: 100%;
+    background-color: #000; */
     font: large bold serif;
     cursor: pointer;
 }
@@ -272,4 +276,148 @@ video.plays_vdx{
 
 .svg_open{
     display:  none;
+}
+
+
+
+
+
+
+/* style for semi card to affichager */
+
+.semi-modcard{
+    position: fixed;
+    top: calc(50% - 190px);
+    left: calc(50% - 200px);
+    margin: auto;
+    width: 400px;
+    height: auto;
+    background: #000;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 3px 3px #9b9b9b;
+    z-index: 10;
+    display: none;
+}
+@media all AND (max-width:420px){
+    .semi-modcard{
+        width: 98%;
+        left: 2px;
+    }
+}
+
+
+/* pour l'affichage de l'avatar */
+#closse{
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    z-index: 11;
+}
+.semi-modcard .content_avatar{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height:  calc(80% - 4px);
+    background-color: rgb(36 18 53 / 59%);
+    border-bottom: solid rgba(255, 255, 255, 0.317) 2px;
+}
+.content_avatar img{
+    width: 100%;
+    height: auto;
+    
+}
+.mod_avx{
+    display: flex;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    justify-content: space-around;
+}
+#avx{
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    background: #000000c1;
+    width: 75%;
+}
+.btn_avx{
+    background: #ffffffc0;
+    border: none;
+    border-radius: 3px;
+    padding: 4px 7px;
+    
+}
+.btn_avx:hover{
+    background: #1ec208b7;  
+}
+#avx:valid{
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    background: #10ee2a98;
+    width: 75%;
+}
+
+.semi-modcard.avatar.actif{
+    display: block;
+}
+.semi-modcard.modif.actif{
+    top: calc(50% - 150px);
+    display: block;
+
+}
+.stat_title{
+    text-align: center;
+    width: 100%;
+    margin-top: 3px;
+}
+.content_modif{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+.content_modif form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.semi_content{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.semi_content .ipform{
+    width: 60%;
+}
+.semi_content input[type=button]{
+    width: 20%;
+}
+.demi_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.demi_content *{
+    width: 90%;
+}
+input{
+    background: rgba(0, 0, 255, 0.49);
+    outline: none;
+    padding-left: 4px;
+    border: none;
+    border-radius: 2px;
+    border-bottom: #ffffff groove 2px;
+}
+input[type=button]{
+    background-color: rgba(128, 255, 0, 0.7);
+}
+input[type=button]:hover{
+    background-color: rgba(128, 255, 0, 0.922);
+}
+.content_modif form label{
+    font-size: larger;
+    padding-left: 6px;
 }

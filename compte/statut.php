@@ -12,7 +12,7 @@ if (isset($_GET['setid'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=$domainhost?>/asset/stAtsTyLe.css">
+    <link rel="stylesheet" href="<?=$domainhost?>/asset/StatstYlE.css">
     <?php
     if ($ismobiles) {
     ?>
@@ -62,7 +62,7 @@ if (isset($_GET['setid'])) {
 <section class="dark_content">
     <main class="menu_stat">
         <div class="head_prof">
-            <img src="<?=$domainhost?>/filesdir/avatares/<?=$atr?>"  alt="">
+            <img src="<?=$domainhost?>/filesdir/avatares/<?=$atr?>" class="profil_svg"  alt="">
             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" class="camera_svg">
                 <path d="M451.385-590.769h329.23q-26.23-70.539-83.653-124.654Q639.538-769.538 566-788L451.385-590.769Zm-82.77
                  80L534.769-796q-11-2-27.384-3Q491-800 480-800q-66 0-123 25t-101 67l112.615 197.231ZM170-400h227.231L234.154-683.692q-35.077
@@ -76,7 +76,7 @@ if (isset($_GET['setid'])) {
         </div>
         <div class="dark_info_menu">
             <div class="info_menu">
-                <h2 class="psd"><?=$ps?></h2>
+                <h2 class="psd"><span><?=$ps?></span> <span class="modif">Modif</span></h2>
                 <div>
                     <?php 
                     if ($id == $_GET['setid']) {
@@ -118,6 +118,63 @@ if (isset($_GET['setid'])) {
                 <a href="<?=$domainhost?>/cc/statut/<?=$_SESSION['id_stat'];?>-setid-nwx-setx" ><li>News</li></a>
                 
             </ul>
+        </div>
+        
+
+
+
+        <div class="semi-modcard avatar">
+        <svg xmlns="http://www.w3.org/2000/svg" class="clossing" id="closse" height="24" fill="#9b9b9b" viewBox="0 -960 960 960" width="24">
+            <path d="m336-280 144-144 144 144 56-56-144-144 144-144-56-56-144 144-144-144-56 56 144 144-144 144 56
+             56ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83
+              0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134
+               0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"></path></svg>
+
+            <div class="content_avatar">
+                <img src="<?=$domainhost?>/filesdir/avatares/<?=$atr?>" alt="l'images du profile" srcset="">
+            </div>   
+            <form action="" method="post" class="mod_avx" enctype="multipart/form-data">
+                <input type="file" name="avx" id="avx" accept="image/*" required>
+                <input type="button" class="btn_avx" value="Modifier">
+            </form>    
+        </div>
+
+
+        <div class="semi-modcard modif">
+        <svg xmlns="http://www.w3.org/2000/svg" class="clossed" id="closse" height="24" fill="#9b9b9b" viewBox="0 -960 960 960" width="24">
+            <path d="m336-280 144-144 144 144 56-56-144-144 144-144-56-56-144 144-144-144-56 56 144 144-144 144 56
+             56ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83
+              0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134
+               0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"></path></svg>
+
+            <div class="content_modif">
+                <h3 class="stat_title">My Status</h3>
+                <form action="" method="post">
+                    <label for="pseudo">Modifier votre Pseudo</label>
+                    <div class="semi_content">
+                       <input class="ipform" type="text" name="pseudo" id="pseudo" value="<?=$ps?>" required>
+                       <input type="button" value="Modifier"> 
+                    </div>
+                    
+                </form>
+
+                <form action="" method="post">
+                    <label for="email">Modifier votre Email</label>
+                    <div class="semi_content">
+                       <input class="ipform" type="email" name="email" id="email" value="<?=$el?>" required>
+                       <input type="button" value="Modifier"> 
+                    </div>
+                </form>
+                
+                <form action="" method="post">
+                    <label for="password">Modifier votre Password</label>
+                    <div class="demi_content">
+                       <input type="password" name="pass_1" id="password" placeholder="* * * * * * * * " required>
+                       <input type="password" name="pass_2" id="password" placeholder="* * * * * * * * " required>
+                       <input type="button" value="Modifier"> 
+                    </div>
+                </form>
+            </div>
         </div>
         
     </main>
@@ -331,8 +388,6 @@ if (isset($_GET['setid'])) {
 
 
 
-
-
     const svgOpen = document.querySelectorAll('.svg_open');
     const svgClose = document.querySelectorAll('.svg_close');
     const barx = document.querySelectorAll('.barx');
@@ -373,31 +428,7 @@ if (isset($_GET['setid'])) {
     }
 
 
-
-
-
-    // const svgOpen = document.querySelectorAll('.svg_open');
-    // const svgClose = document.querySelectorAll('.svg_close');
-    // const barx = document.querySelectorAll('.barx');
     
-    // document.querySelectorAll('.').style.display='none';
-
-    // svgOpen.forEach(svgelx => {
-    //     const prexent = svgelx.parentNode;
-    //     svgelx.addEventListener('click', () => OpenSectionUl(prexent);)
-    // });
-
-    // document.querySelectorAll('.barx').forEach((cliked) => {
-    //     cliked.addEventListener('click' , () => OpenSectionUl(cliked));
-    // });
-
-
-    // function OpenSectionUl(param){
-    //     alert("dfbvkjyujhwv");
-    //     param.querySelector('.nini_content').style.display='inline-flex';
-    // }
-
-
 
 
 
@@ -424,6 +455,31 @@ if (isset($_GET['setid'])) {
         xhrx.responseType = "json";
         xhrx.send();
     });
+
+
+
+
+
+    const btnModavx = document.querySelector('.camera_svg');
+    btnModavx.addEventListener('click' ,() => {
+        document.querySelector('.semi-modcard.avatar').classList.toggle('actif');
+        document.querySelector('.semi-modcard.modif').classList.remove('actif');
+    });
+    document.querySelector('.clossing').addEventListener('click' ,() => {
+        document.querySelector('.semi-modcard.avatar').classList.remove('actif');
+    });
+
+
+    const btnMod = document.querySelector('.modif');
+    btnMod.addEventListener('click' ,() => {
+        document.querySelector('.semi-modcard.modif').classList.toggle('actif');
+        document.querySelector('.semi-modcard.avatar').classList.remove('actif');
+    });
+    document.querySelector('.clossed').addEventListener('click' ,() => {
+        document.querySelector('.semi-modcard.modif').classList.remove('actif');
+    });
+
+
 </script>
 
 
