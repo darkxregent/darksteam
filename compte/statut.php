@@ -12,31 +12,31 @@ if (isset($_GET['setid'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=$domainhost?>/asset/StatstYlE.css">
+    <link rel="stylesheet" href="<?=$domainhost?>/asset/statstylE.css">
     <?php
-    if ($ismobiles) {
-    ?>
-    <style>
-        .sous_op{
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100vw;
-            margin-top: 0;
-        }
-        .dark_content{
-            position: relative;
-            left: 0;
-            top: 50px;
-            width: 100vw;
-            height: calc(100vh - 98px);
-            overflow: auto;
-            overflow-x: hidden;
-        }
+        if ($ismobiles) {
+        ?>
+        <style>
+            .sous_op{
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100vw;
+                margin-top: 0;
+            }
+            .dark_content{
+                position: relative;
+                left: 0;
+                top: 50px;
+                width: 100vw;
+                height: calc(100vh - 98px);
+                overflow: auto;
+                overflow-x: hidden;
+            }
 
-    </style>
-    <?php
-    }
+        </style>
+        <?php
+        }
     ?>
 
     <title>statuts</title>
@@ -76,7 +76,11 @@ if (isset($_GET['setid'])) {
         </div>
         <div class="dark_info_menu">
             <div class="info_menu">
-                <h2 class="psd"><span><?=$ps?></span> <span class="modif">Modif</span></h2>
+                <h2 class="psd"><span><?=$ps?></span> <span class="modif">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" fill="#fff" width="32" alt="modifier votre status">
+                        <path d="M240-280h480v-120H240v120Zm-80 120q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33
+                         0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z"/></svg>
+                </span></h2>
                 <div>
                     <?php 
                     if ($id == $_GET['setid']) {
@@ -169,8 +173,8 @@ if (isset($_GET['setid'])) {
                 <form action="" method="post">
                     <label for="password">Modifier votre Password</label>
                     <div class="demi_content">
-                       <input type="password" name="pass_1" id="password" placeholder="* * * * * * * * " required>
-                       <input type="password" name="pass_2" id="password" placeholder="* * * * * * * * " required>
+                        <input type="password" name="pass_1" id="password" placeholder="inseret votre nouveau mots de pass" required>
+                        <input type="password" name="pass_2" id="password" placeholder="confirmer le mots de pass " required>
                        <input type="button" value="Modifier"> 
                     </div>
                 </form>
@@ -229,6 +233,30 @@ if (isset($_GET['setid'])) {
             }elseif ($_GET['setx'] == "plx") {
             ?>
                 my playliste
+                <div class="content_plx">
+                    <div class="plx_card">
+                        <img src="<?=$domainhost?>/filesdir/avatares/<?=$atr?>" alt="">
+                    </div>
+                    <div class="content_info_plx">
+                        <div class="plx_info">
+                            <h3>NOM DU PLX</h3>
+                            <h4>NBR DE VIFEOS DU PLX</h4>
+                        </div>
+                        <div class="option_plx">
+                            <button type="button">Modifier</button>
+                            <button type="button">Suprime</button>
+                        </div>
+                        
+                    </div>
+                    <div class="open_plx">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" class="svg_close" fill="#fff" width="14">
+                            <path d="m305-61-79-79 342-342-342-342 79-79 420 421L305-61Z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" class="svg_close" fill="#fff" width="14">
+                            <path d="m305-61-79-79 342-342-342-342 79-79 420 421L305-61Z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" class="svg_close" fill="#fff" width="14">
+                            <path d="m305-61-79-79 342-342-342-342 79-79 420 421L305-61Z"></path></svg>
+                    </div>    
+                </div>
             <?php
             }elseif ($_GET['setx'] == "nwx") {
             ?>

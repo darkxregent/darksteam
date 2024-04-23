@@ -370,6 +370,9 @@ video.plays_vdx{
     width: 100%;
     margin-top: 3px;
 }
+.modif{
+    cursor: pointer;
+}
 .content_modif{
     display: flex;
     flex-direction: column;
@@ -420,4 +423,88 @@ input[type=button]:hover{
 .content_modif form label{
     font-size: larger;
     padding-left: 6px;
+}
+
+.content_plx{
+    position: relative;
+    width: calc(100% - 15px);
+    height: auto;
+    padding: 5px;
+    background: #000;
+    display: flex;
+    gap: 12px;
+}
+.plx_card{
+    width: 300px;
+    height: 175px;
+    border: 2px groove #fff;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 2px;
+}
+.plx_card img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    object-position: top;
+    object-fit: cover;
+}
+.plx_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+.content_info_plx{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.option_plx{
+    display: flex;
+    gap: 50px;
+}
+.option_plx button{
+    color: wheat;
+    background: #000;
+    width: 80px;
+    box-shadow: 3px 1px 2px 1px #2fa7df;
+    border-radius: 5px;
+}
+.open_plx{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background-color: rgb(254 254 254 / 22%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+@media all AND (max-width:600px){
+    .content_info_plx{
+        position: absolute;
+        bottom: 6px;
+        left: 15px;
+    }
+    .plx_info h3 {
+        color: rgba(57, 32, 32, 0.984);
+        text-shadow:  -2px -1px 0px white;
+    }
+    .plx_info h4{
+        color: darkred;
+        text-shadow:  -1px -1px 0px rgb(255, 210, 30);
+        
+    }
+    .option_plx button{
+        box-shadow: none;
+    }
+    .content_plx{
+        border-radius: 4px;
+    }
 }
