@@ -4,7 +4,7 @@
     if (!isset($_SESSION['auth'])) {
         header('location: '.$domainhost.'/compte/login.php'); 
     }
-    
+    $_SESSION['id_stat'] = $_SESSION['id_user'];
     if ($_SESSION['auth']) {
         $id_user = $_SESSION['id_user'];
 
@@ -92,7 +92,7 @@
             
             <ul class="op_list">
             
-            <a class="hd_list_a" href="index"><li class="hd_list"><?=$opts?></li></a>
+            <a class="hd_list_a" href="<?=$domainhost?>/index"><li class="hd_list"><?=$opts?></li></a>
             <?php
             
                 $resqcath = "SELECT * FROM cathegories WHERE id_opt = ?";
@@ -191,8 +191,8 @@
                         0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240h-80v80q0 33-23.5 56.5T640-80H160Zm160-240h480v-480H320v480Z"/></svg>
                     <span>abonnemnt</span></li>
     
-    
-                <li><a href="<?=$domainhost?>/cc/statut/<?=$_SESSION['id_stat'];?>-setid-vdx-setx"">
+                    
+                <li><a href="<?=$domainhost?>/cc/statut/<?=$_SESSION['id_stat']?>-setid-vdx-setx">
                     <svg xmlns="http://www.w3.org/2000/svg" class="option_svg"  viewBox="0 -960 960 960" >
                         <path d="m429-383 270-174-270-175v349ZM285-195q-36.413 0-63.706-27.612Q194-250.225
                         194-286v-542q0-36.188 27.294-64.094Q248.587-920 285-920h542q36.188 0 63.594
